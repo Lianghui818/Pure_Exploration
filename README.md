@@ -10,16 +10,12 @@ This project investigates the federated pure exploration problem within multi-ar
 This repository contains implementation of the proposed algorithms UGapE, LinGapE, and FALinPE for comparison. 
 
 For experiments on the synthetic dataset, run: 
-
 SimLinear.py 
 SimTabular.py
 
 Experiment results can be found in "./SimTabular/" and "./SimLinear/ folder, which contains: 
-
 "SamConAndCommCost_[startTime].png/pdf": plot of accumulated regret / communication cost over time for each algorithm 
-
 "SampleComplex_dataset[number][startTime].csv": sample complexty at each iteration for each algorithm_ 
-
 "AccCommCost_dataset[number][startTime].csv": communication cost at each iteration for each algorithm_
 
 
