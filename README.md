@@ -13,7 +13,7 @@ SimLinear.py,
 SimTabular.py
 
 Experiment results can be found in "./SimTabular/" and "./SimLinear/" folder, which contains:
-- "SamConAndCommCost_dataset[number]_[startTime].png/pdf": plot of accumulated regret / communication cost over time for each algorithm
+- "SamConAndCommCost_dataset[number]_[startTime].png/pdf": plot of sample complexity / communication cost over time for each algorithm
 - "SampleComplex_dataset[number]_[startTime].csv": sample complexty at each iteration for each algorithm
 - "AccCommCost_dataset[number]_[startTime].csv": communication cost at each iteration for each algorithm
 
