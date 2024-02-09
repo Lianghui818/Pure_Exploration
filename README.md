@@ -1,30 +1,39 @@
-# Pure Exploration for Asynchronous Federated Bandits
+# Code for "Asynchronous Upper Confidence Bound Algorithms for Federated Linear Bandits"
 
-**Introduction**
+This repository contains implementation of the proposed algorithms Async-LinUCB, Async-LinUCB-AM, and baseline algorithm Sync-LinUCB for comparison.
+For experiments on the synthetic dataset, run:
+```console
+python SimulationHomogeneousClients.py --T 50000 --N 1000  # simulate homogeneous clients
+python SimulationHeterogeneousClients.py --T 50000 --N 1000 --globaldim 16  # simulate heterogeneous clients
+```
 
-This project investigates the federated pure exploration problem within multi-armed and linear bandits settings, where multiple agents collaborate to identify the best arm under communication with a central server. Addressing common issues like latency and unavailability of clients in practical scenarios, we introduce the first federated asynchronous algorithms for multi-armed bandit (MAB) and linear bandit models aimed at pure exploration with fixed confidence. Our approach balances the exploration-exploitation trade-off efficiently, even in fully asynchronous environments, enhancing robustness against delays and agent unavailability while minimizing communication costs.
+Experiment results can be found in "./SimulationResults/" folder, which contains:
+- "regretAndcommCost\_[startTime].png": plot of accumulated regret / communication cost over time for each algorithm
+- "AccRegret\_[startTime].csv": regret at each iteration for each algorithm
+- "AccCommCost\_[startTime].csv": communication cost at each iteration for each algorithm
+- "ParameterEstimation\_[startTime].csv": l2 norm between estimated and ground-truth parameter at each iteration for each algorithm
 
-
-**Main Code**
-
-This repository contains implementation of the proposed algorithms UGapE, LinGapE, and FALinPE for comparison. 
-
-For experiments on the synthetic dataset, run: 
-
-SimLinear.py 
-SimTabular.py
-
-Experiment results can be found in "./SimTabular/" and "./SimLinear/ folder, which contains: 
-
-"SamConAndCommCost_dataset[number]_[startTime].png/pdf": plot of accumulated regret/communication cost over time for each algorithm 
-
-"SampleComplex_dataset[number]_[startTime].csv": sample complexty at each iteration for each algorithm
-
-"AccCommCost_dataset[number]_[startTime].csv": communication cost at each iteration for each algorithm
+For experiments on realworld dataset, e.g. LastFM, Delicious, MovieLens, 
+- First download these publicly available data into Dataset folder 
+- Then process the dataset following instructions in the appendix of the paper, which would generate the item feature vector file and the event file. Example scripts for processing data are given in Dataset folder.
+- Run experiments using the provided python script, e.g. ``python SimulationRealworldData.py --dataset LastFM``
 
 
-For experiments on realworld dataset (MovieLens): 
-Available dataset and file scripts for data processing and feature vector generationare given in "./Dataset" folder.
-Experiment results can be found in "./MovieLinear/" folder。
+Updates::
+For Testing LinGapE in homogeneous clients, run:
+```console
+python SimHomogeneousClientsLinGapE.py
+```
 
-run plot_v.py
+Experiment results can be found in "./LinGapE_Simulations" folder, which contains:
+- "AccCommCost\_[startTime].csv": communication cost at each iteration for each algorithm
+- "SampleComplex\_[startTime].csv": number of samples required to estimate the best for each algorithm
+
+Updates：5/14/2023
+
+Find linear case result in SimLinear.py
+Find Tabular case result in SimTabular.py
+For the connection setting: 100 iterations per connection
+
+to run the code: python SimLinear.py  
+				 python SimTabular.py
