@@ -1,4 +1,4 @@
-# Pure Exploration for Asynchronous Federated Bandits"
+# Pure Exploration for Asynchronous Federated Bandits
 
 **Introduction**
 
