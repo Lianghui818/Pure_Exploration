@@ -21,6 +21,6 @@ Experiment results can be found in "./SimTabular/" and "./SimLinear/ folder, whi
 
 For experiments on realworld dataset (MovieLens): 
 Available dataset and file scripts for data processing and feature vector generationare given in "./Dataset" folder.
-Experiment results can be found in "./MovieLinear/" folder 
+Experiment results can be found in "./MovieLinear/" folder。
 
 run plot_v.py
