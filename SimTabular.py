@@ -207,7 +207,7 @@ if __name__ == '__main__':
 	if args.N:
 		n_users = int(args.N)
 	else:
-		n_users = (5,10,15,20,25)
+		n_users = 15
 	
 	if args.E:
 		epsilon = float(args.E)
