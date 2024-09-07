@@ -2,7 +2,7 @@
 
 **Introduction**
 
-This project investigates the federated pure exploration problem within multi-armed and linear bandits settings, where multiple agents collaborate to identify the best arm under communication with a central server. Addressing common issues like latency and unavailability of clients in practical scenarios, we introduce the first federated asynchronous algorithms for multi-armed bandit (MAB) and linear bandit models aimed at pure exploration with fixed confidence. Our approach balances the exploration-exploitation trade-off efficiently, even in fully asynchronous environments, enhancing robustness against delays and agent unavailability while minimizing communication costs.
+This repository contains code for "Pure Exploration in Asynchronous Federated Bandits" published at UAI2024. This project investigates the federated pure exploration problem within multi-armed and linear bandits settings, where multiple agents collaborate to identify the best arm under communication with a central server. Addressing common issues like latency and unavailability of clients in practical scenarios, we introduce the first federated asynchronous algorithms for multi-armed bandit (MAB) and linear bandit models aimed at pure exploration with fixed confidence. Our approach balances the exploration-exploitation trade-off efficiently, even in fully asynchronous environments, enhancing robustness against delays and agent unavailability while minimizing communication costs.
 
 
 **Main code**
@@ -20,3 +20,15 @@ Experiment results can be found in "./SimTabular/" and "./SimLinear/" folder, wh
 For experiments on realworld dataset (MovieLens): 
 - Available dataset and file scripts for data processing and feature vector generationare given in "./Dataset" folder. 
 - Experiment results can be found in "./MovieLinear/" folder run: plot_v.py
+
+**Reference**
+```
+@inproceedings{
+  wang2024pure,
+  title={Pure Exploration in Asynchronous Federated Bandits},
+  author={Zichen Wang and Chuanhao Li and chenyu song and Lianghui Wang and Quanquan Gu and Huazheng Wang},
+  booktitle={The 40th Conference on Uncertainty in Artificial Intelligence},
+  year={2024},
+  url={https://openreview.net/forum?id=VqgArMVbZf}
+}
+```
